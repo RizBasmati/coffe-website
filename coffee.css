@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(249, 235, 198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.texte {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: clamp(30px, 5vw, 60px);
+    margin-bottom: 10px;
+}
+
+.coffee-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+}
+
+.coffee-machine {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.5s ease;
+
+}
+
+.coffee-machine.hide {
+    transform: translateX(-200%);
+}
+
+.tasse-1 {
+    position: absolute;
+    width: 30%;
+    max-width: 180px;
+    left: 49%;
+    bottom: 9%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.tasse-1.click {
+    cursor: pointer;
+}
+
+.button {
+    position: absolute;
+    width: 5.2%;
+    height: 5%;
+    background-color: rgba(0, 255, 0, 0.5);
+    cursor: pointer;
+    top: 21.3%;
+    right: 39%;
+    z-index: 1;
+}
+
+.rectangle {
+    position: absolute;
+    background-color: #7d5435;
+    width: 2%;
+    height: 17.45%;
+    left: 47.8%;
+    bottom: 23.7%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.table {
+   position: absolute; 
+   width: 90%;
+   top: 72%;
+   right: -200%;
+   transition: right 0.5s ease;
+}
+
+.table.show {
+    right: 6.7%;
+}
+
+.smoke {
+    position: absolute;
+    width: 6%; 
+    left: 48.5%;
+    bottom: 40.5%; 
+    transform: translateX(-50%);
+    z-index: 4; 
+    pointer-events: none; 
+}
+
